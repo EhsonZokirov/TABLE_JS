@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TABLE</title>
+    <link rel="stylesheet" href="table.css" />
+    <!-- <script src="https://kit.fontawesome.com/42a3abb98a.js" crossorigin="anonymous"></script> -->
+    <link
+      rel="stylesheet"
+      href="fontawesome-free-6.3.0-web/fontawesome-free-6.3.0-web/css/all.css"
+    />
+  </head>
+  <body>
+    <!--ADD-MODAL--------------------------------------------------------------------------- ADD  Modal -->
+    <div id="myModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Заполните поля !</h2>
+        <form action="" class="formAdd">
+          <label for=""></label>
+          <input type="text" name="nameAdd" id="" placeholder="Name" />
+          <label for=""></label>
+          <input type="text" name="ageAdd" id="" placeholder="Age" />
+          <label for=""></label>
+          <input type="text" name="courseAdd" id="" placeholder="course" />
+
+          <label for=""></label>
+          <input type="text" name="phone" id="" placeholder="phone" />
+
+          <label for=""></label>
+          <input type="text" name="email" id="" placeholder="email" />
+          <button type="submit">Добавить</button>
+        </form>
+      </div>
+    </div>
+    <!--EDIT-MODAL--------------------------------------------------------------------------- ADD  Modal -->
+    <div id="myModal" class="editModal">
+      <!-- Modal content EDIT -->
+      <div class="modal-content-edit">
+        <span class="closeEdit">&times;</span>
+        <h2>Изменить значения!</h2>
+        <form action="" class="formEdit">
+          <!-- name -->
+          <label for=""></label>
+          <input type="text" name="nameEdit" id="" placeholder="Name" />
+          <!-- age -->
+          <label for=""></label>
+          <input type="text" name="ageEdit" id="" placeholder="Age" />
+          <!-- course -->
+          <label for=""></label>
+          <input type="text" name="courseEdit" id="" placeholder="course" />
+          <!-- phone -->
+          <label for=""></label>
+          <input type="text" name="phoneEdit" id="" placeholder="phone" />
+          <!-- email -->
+          <label for=""></label>
+          <input type="text" name="emailEdit" id="" placeholder="email" />
+          <!-- SUBMIT -->
+          <button type="submit">Добавить</button>
+        </form>
+      </div>
+    </div>
+    <!---delete MODAL--------------------------------------------------------------------------- DELETE Modal -->
+    <div id="modalDelete" class="modalDelete">
+      <!-- Modal content -->
+      <div class="modal-content-delete">
+        <span class="closeDelete">&times;</span>
+        <h2>Удалить ползователя ?</h2>
+        <div>
+          <button class="deleteYes">Да</button>
+          <button class="deleteCancel">Отменить</button>
+        </div>
+      </div>
+    </div>
+    <!----READ-MODAL-------------------------------------------------------------------------- READ  Modal -->
+    <div id="modalRead" class="modalRead">
+      <!-- Modal content -->
+      <div class="modal-content-read">
+        <span class="closeRead">&times;</span>
+
+        <div class="card"></div>
+      </div>
+    </div>
+    <!------------------------------------------------------------------------------- TABLE -->
+    <table class="table">
+      <caption>
+        <button class="myBtn">TABLE USERS</button>
+      </caption>
+      <thead class="thead">
+        <td>Name</td>
+        <td>Age</td>
+        <td>Course</td>
+        <td>Actions</td>
+      </thead>
+      <tbody class="tbody"></tbody>
+      <button class="trash">
+        <i class="fa-solid fa-trash"></i>
+      </button>
+    </table>
+    <!---------------------------------------------------------------------------------- scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="table.js"></script>
+  </body>
+</html>
