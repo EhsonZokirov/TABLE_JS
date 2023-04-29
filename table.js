@@ -83,51 +83,7 @@ window.onclick = function (event) {
     modalDelete.style.display = "none";
   }
 };
-///////////////////////////////////////////////////////////////////////////////////////////// GET AXIOS
-const getFunction = async () => {
-  try {
-    let { data } = await axios.get(url);
-    console.log(data);
-    getUsers(data);
-  } catch (error) {
-    console.log(error);
-  }
-};
-///////////////////////////////////////////////////////////////////////////////////////////// DELETE AXIOS
 
-const deleteFunction = async (id) => {
-  try {
-    let { data } = await axios.delete(
-      `https://63d0e533120b32bbe8eca000.mockapi.io/user/${id}`
-    );
-    getFunction(data);
-  } catch (error) {
-    console.log();
-  }
-};
-///////////////////////////////////////////////////////////////////////////////////////////// EDIT AXIOS
-
-const putFunction = async (id, obj) => {
-  try {
-    let { data } = await axios.put(
-      `https://63d0e533120b32bbe8eca000.mockapi.io/user/${id}`,
-      obj
-    );
-    getFunction(data);
-  } catch (error) {
-    console.log();
-  }
-};
-///////////////////////////////////////////////////////////////////////////////////////////// POST AXIOS
-
-const postFunction = async (obj) => {
-  try {
-    let { data } = await axios.post(url, obj);
-    getFunction();
-  } catch (error) {
-    console.log();
-  }
-};
 //////////////////////////////////////////////////////////////////////////////////////////////// formAdd onsubmit
 formAdd.onsubmit = (event) => {
   event.preventDefault();
